@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/matheus/repos/autonomous_robot/dev_ws/build/my_robot_controller/robot_controller" "TARGETS" "robot_controller" "DESTINATION" "lib/my_robot_controller")

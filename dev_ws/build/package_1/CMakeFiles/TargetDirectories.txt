@@ -1,0 +1,10 @@
+/home/matheus/repos/autonomous_robot/dev_ws/build/package_1/CMakeFiles/uninstall.dir
+/home/matheus/repos/autonomous_robot/dev_ws/build/package_1/CMakeFiles/package_1_uninstall.dir
+/home/matheus/repos/autonomous_robot/dev_ws/build/package_1/CMakeFiles/talker.dir
+/home/matheus/repos/autonomous_robot/dev_ws/build/package_1/CMakeFiles/test.dir
+/home/matheus/repos/autonomous_robot/dev_ws/build/package_1/CMakeFiles/edit_cache.dir
+/home/matheus/repos/autonomous_robot/dev_ws/build/package_1/CMakeFiles/rebuild_cache.dir
+/home/matheus/repos/autonomous_robot/dev_ws/build/package_1/CMakeFiles/list_install_components.dir
+/home/matheus/repos/autonomous_robot/dev_ws/build/package_1/CMakeFiles/install.dir
+/home/matheus/repos/autonomous_robot/dev_ws/build/package_1/CMakeFiles/install/local.dir
+/home/matheus/repos/autonomous_robot/dev_ws/build/package_1/CMakeFiles/install/strip.dir
