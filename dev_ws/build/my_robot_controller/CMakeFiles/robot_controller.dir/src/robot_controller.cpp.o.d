@@ -604,4 +604,6 @@ CMakeFiles/robot_controller.dir/src/robot_controller.cpp.o: \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.hpp \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__builder.hpp \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__traits.hpp \
- /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__traits.hpp
+ /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__traits.hpp \
+ /usr/include/curses.h /usr/include/ncurses_dll.h /usr/include/unctrl.h \
+ /usr/include/curses.h

@@ -27,7 +27,7 @@ ament_package()
 
 add_executable(robot_controller src/robot_controller.cpp)
 ament_target_dependencies(robot_controller rclcpp geometry_msgs)
-
+target_link_libraries(robot_controller ncurses)
 install(TARGETS
   robot_controller
   DESTINATION lib/${PROJECT_NAME})

@@ -1,7 +1,6 @@
 #include "rclcpp/rclcpp.hpp"
 #include "geometry_msgs/msg/twist.hpp"
-
-using namespace std::chrono_literals;
+#include <ncurses.h>
 
 class RobotController : public rclcpp::Node
 {
@@ -9,26 +8,62 @@ public:
     RobotController() : Node("robot_controller")
     {
         publisher_ = this->create_publisher<geometry_msgs::msg::Twist>("cmd_vel", 10);
-        timer_ = this->create_wall_timer(500ms, std::bind(&RobotController::publish_velocity, this));
+        initKeyboard();
+    }
+
+    ~RobotController()
+    {
+        endwin(); // Finaliza o modo ncurses
+    }
+
+    void controlLoop()
+    {
+        int ch;
+        nodelay(stdscr, TRUE);
+        while (rclcpp::ok()) {
+            if ((ch = getch()) != ERR) {
+                geometry_msgs::msg::Twist msg;
+                switch (ch) {
+                    case 'w': // frente
+                        msg.linear.x = 0.5;
+                        break;
+                    case 's': // trás
+                        msg.linear.x = -0.5;
+                        break;
+                    case 'a': // esquerda
+                        msg.angular.z = 1.0;
+                        break;
+                    case 'd': // direita
+                        msg.angular.z = -1.0;
+                        break;
+                    default:
+                        msg.linear.x = 0.0;
+                        msg.angular.z = 0.0;
+                        break;
+                }
+                publisher_->publish(msg);
+            }
+            rclcpp::spin_some(shared_from_this());
+            std::this_thread::sleep_for(std::chrono::milliseconds(10));
+        }
     }
 
 private:
-    void publish_velocity()
+    void initKeyboard()
     {
-        geometry_msgs::msg::Twist msg;
-        msg.linear.x = 0.5; // Move forward at 0.5 m/s
-        msg.angular.z = 0.0; // No angular velocity
-        publisher_->publish(msg);
+        initscr();
+        cbreak(); 
+        noecho();
     }
+
     rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr publisher_;
-    rclcpp::TimerBase::SharedPtr timer_;
 };
 
-int main(int argc, char * argv[])
+int main(int argc, char* argv[])
 {
     rclcpp::init(argc, argv);
     auto node = std::make_shared<RobotController>();
-    rclcpp::spin(node);
+    node->controlLoop();
     rclcpp::shutdown();
     return 0;
 }
