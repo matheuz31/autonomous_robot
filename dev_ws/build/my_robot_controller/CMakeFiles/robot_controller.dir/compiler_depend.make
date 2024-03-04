@@ -670,8 +670,161 @@ CMakeFiles/robot_controller.dir/src/robot_controller.cpp.o: /home/matheus/repos/
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.hpp \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__builder.hpp \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__traits.hpp \
-  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__traits.hpp
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__traits.hpp \
+  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/image.hpp \
+  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__struct.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.hpp \
+  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__builder.hpp \
+  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__traits.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__traits.hpp \
+  /opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h \
+  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/compressed_image.hpp \
+  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/compressed_image__struct.hpp \
+  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/compressed_image__builder.hpp \
+  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/compressed_image__traits.hpp \
+  /opt/ros/humble/include/sensor_msgs/sensor_msgs/image_encodings.hpp \
+  /usr/include/opencv4/opencv2/core/core.hpp \
+  /usr/include/opencv4/opencv2/core.hpp \
+  /usr/include/opencv4/opencv2/core/cvdef.h \
+  /usr/include/opencv4/opencv2/core/version.hpp \
+  /usr/include/opencv4/opencv2/core/hal/interface.h \
+  /usr/include/c++/11/cstddef \
+  /usr/include/opencv4/opencv2/core/cv_cpu_dispatch.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/emmintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/xmmintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/mmintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/mm_malloc.h \
+  /usr/include/opencv4/opencv2/core/base.hpp \
+  /usr/include/opencv4/opencv2/opencv_modules.hpp \
+  /usr/include/c++/11/climits \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
+  /usr/include/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+  /usr/include/linux/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
+  /usr/include/opencv4/opencv2/core/cvstd.hpp \
+  /usr/include/opencv4/opencv2/core/cvstd_wrapper.hpp \
+  /usr/include/opencv4/opencv2/core/neon_utils.hpp \
+  /usr/include/opencv4/opencv2/core/vsx_utils.hpp \
+  /usr/include/opencv4/opencv2/core/check.hpp \
+  /usr/include/opencv4/opencv2/core/traits.hpp \
+  /usr/include/opencv4/opencv2/core/matx.hpp \
+  /usr/include/opencv4/opencv2/core/saturate.hpp \
+  /usr/include/opencv4/opencv2/core/fast_math.hpp \
+  /usr/include/opencv4/opencv2/core/types.hpp \
+  /usr/include/c++/11/cfloat \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/float.h \
+  /usr/include/opencv4/opencv2/core/mat.hpp \
+  /usr/include/opencv4/opencv2/core/bufferpool.hpp \
+  /usr/include/opencv4/opencv2/core/mat.inl.hpp \
+  /usr/include/opencv4/opencv2/core/persistence.hpp \
+  /usr/include/opencv4/opencv2/core/operations.hpp \
+  /usr/include/opencv4/opencv2/core/cvstd.inl.hpp \
+  /usr/include/c++/11/complex \
+  /usr/include/opencv4/opencv2/core/utility.hpp \
+  /usr/include/opencv4/opencv2/core/optim.hpp \
+  /usr/include/opencv4/opencv2/core/ovx.hpp \
+  /usr/include/opencv4/opencv2/core/cvdef.h \
+  /usr/include/opencv4/opencv2/imgproc/imgproc.hpp \
+  /usr/include/opencv4/opencv2/imgproc.hpp \
+  /usr/include/opencv4/opencv2/imgproc/segmentation.hpp \
+  /usr/include/opencv4/opencv2/imgproc/types_c.h \
+  /usr/include/opencv4/opencv2/core/core_c.h \
+  /usr/include/opencv4/opencv2/core/types_c.h \
+  /opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge_export.h \
+  /usr/include/opencv4/opencv2/highgui/highgui.hpp \
+  /usr/include/opencv4/opencv2/highgui.hpp \
+  /usr/include/opencv4/opencv2/imgcodecs.hpp \
+  /usr/include/opencv4/opencv2/videoio.hpp \
+  /usr/include/curses.h \
+  /usr/include/ncurses_dll.h \
+  /usr/include/unctrl.h \
+  /usr/include/curses.h
 
+
+/usr/include/opencv4/opencv2/videoio.hpp:
+
+/usr/include/opencv4/opencv2/imgcodecs.hpp:
+
+/usr/include/opencv4/opencv2/highgui.hpp:
+
+/opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge_export.h:
+
+/usr/include/opencv4/opencv2/imgproc/segmentation.hpp:
+
+/usr/include/opencv4/opencv2/imgproc/imgproc.hpp:
+
+/usr/include/opencv4/opencv2/core/optim.hpp:
+
+/usr/include/opencv4/opencv2/core/cvstd.inl.hpp:
+
+/usr/include/opencv4/opencv2/core/persistence.hpp:
+
+/usr/include/opencv4/opencv2/core/mat.inl.hpp:
+
+/usr/include/opencv4/opencv2/core/mat.hpp:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/float.h:
+
+/usr/include/c++/11/cfloat:
+
+/usr/include/opencv4/opencv2/core/matx.hpp:
+
+/usr/include/opencv4/opencv2/core/traits.hpp:
+
+/usr/include/opencv4/opencv2/core/vsx_utils.hpp:
+
+/usr/include/opencv4/opencv2/core/neon_utils.hpp:
+
+/usr/include/opencv4/opencv2/core/cvstd_wrapper.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/uio_lim.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
+
+/usr/include/linux/limits.h:
+
+/usr/include/x86_64-linux-gnu/bits/local_lim.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h:
+
+/usr/include/c++/11/climits:
+
+/usr/include/opencv4/opencv2/core/base.hpp:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/xmmintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/emmintrin.h:
+
+/usr/include/c++/11/cstddef:
+
+/usr/include/opencv4/opencv2/core/version.hpp:
+
+/usr/include/opencv4/opencv2/core.hpp:
+
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/image_encodings.hpp:
+
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/compressed_image__builder.hpp:
+
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/compressed_image__struct.hpp:
+
+/usr/include/opencv4/opencv2/core/cvstd.hpp:
+
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/compressed_image.hpp:
+
+/opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:
+
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__builder.hpp:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.hpp:
+
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__struct.hpp:
 
 /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__struct.hpp:
 
@@ -679,11 +832,15 @@ CMakeFiles/robot_controller.dir/src/robot_controller.cpp.o: /home/matheus/repos/
 
 /opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/static_storage.hpp:
 
+/usr/include/opencv4/opencv2/core/utility.hpp:
+
 /opt/ros/humble/include/rclcpp/rclcpp/wait_result_kind.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/wait_result.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/subscription_wait_set_mask.hpp:
+
+/usr/include/limits.h:
 
 /opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/dynamic_storage.hpp:
 
@@ -710,6 +867,8 @@ CMakeFiles/robot_controller.dir/src/robot_controller.cpp.o: /home/matheus/repos/
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameters__struct.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameter_types__traits.hpp:
+
+/usr/include/opencv4/opencv2/opencv_modules.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameter_types__builder.hpp:
 
@@ -747,6 +906,8 @@ CMakeFiles/robot_controller.dir/src/robot_controller.cpp.o: /home/matheus/repos/
 
 /opt/ros/humble/include/rclcpp/rclcpp/node_options.hpp:
 
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__traits.hpp:
+
 /opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_waitables_interface.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_time_source_interface.hpp:
@@ -773,11 +934,15 @@ CMakeFiles/robot_controller.dir/src/robot_controller.cpp.o: /home/matheus/repos/
 
 /opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_topics_interface.hpp:
 
+/usr/include/opencv4/opencv2/core/cv_cpu_dispatch.h:
+
 /opt/ros/humble/include/rcutils/rcutils/shared_library.h:
 
 /opt/ros/humble/include/rcpputils/rcpputils/shared_library.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter__traits.hpp:
+
+/usr/include/opencv4/opencv2/core/types.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_event__traits.hpp:
 
@@ -841,6 +1006,8 @@ CMakeFiles/robot_controller.dir/src/robot_controller.cpp.o: /home/matheus/repos/
 
 /usr/include/c++/11/bits/move.h:
 
+/usr/include/opencv4/opencv2/core/core.hpp:
+
 /usr/include/c++/11/bits/hash_bytes.h:
 
 /usr/include/c++/11/bits/enable_special_members.h:
@@ -875,6 +1042,8 @@ CMakeFiles/robot_controller.dir/src/robot_controller.cpp.o: /home/matheus/repos/
 
 /opt/ros/humble/include/libstatistics_collector/libstatistics_collector/topic_statistics_collector/topic_statistics_collector.hpp:
 
+/usr/include/opencv4/opencv2/imgproc/types_c.h:
+
 /usr/include/c++/11/string_view:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
@@ -894,6 +1063,8 @@ CMakeFiles/robot_controller.dir/src/robot_controller.cpp.o: /home/matheus/repos/
 /usr/include/c++/11/cctype:
 
 /usr/include/c++/11/iomanip:
+
+/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
 
 /usr/include/x86_64-linux-gnu/bits/locale.h:
 
@@ -975,6 +1146,8 @@ CMakeFiles/robot_controller.dir/src/robot_controller.cpp.o: /home/matheus/repos/
 
 /usr/include/c++/11/bits/nested_exception.h:
 
+/usr/include/opencv4/opencv2/highgui/highgui.hpp:
+
 /opt/ros/humble/include/rmw/rmw/publisher_options.h:
 
 /opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/detail/storage_policy_common.hpp:
@@ -1022,6 +1195,8 @@ CMakeFiles/robot_controller.dir/src/robot_controller.cpp.o: /home/matheus/repos/
 /usr/include/x86_64-linux-gnu/bits/cpu-set.h:
 
 /opt/ros/humble/include/rclcpp/rclcpp/allocator/allocator_deleter.hpp:
+
+/usr/include/opencv4/opencv2/imgproc.hpp:
 
 /usr/include/c++/11/bits/unordered_map.h:
 
@@ -1107,6 +1282,8 @@ CMakeFiles/robot_controller.dir/src/robot_controller.cpp.o: /home/matheus/repos/
 
 /opt/ros/humble/include/libstatistics_collector/libstatistics_collector/moving_average_statistics/types.hpp:
 
+/usr/include/opencv4/opencv2/core/fast_math.hpp:
+
 /usr/include/locale.h:
 
 /opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:
@@ -1149,6 +1326,8 @@ CMakeFiles/robot_controller.dir/src/robot_controller.cpp.o: /home/matheus/repos/
 
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
 
+/usr/include/opencv4/opencv2/core/check.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
 
 /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.hpp:
@@ -1164,6 +1343,8 @@ CMakeFiles/robot_controller.dir/src/robot_controller.cpp.o: /home/matheus/repos/
 /usr/include/x86_64-linux-gnu/sys/cdefs.h:
 
 /usr/include/c++/11/ctime:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/mm_malloc.h:
 
 /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__traits.hpp:
 
@@ -1281,11 +1462,15 @@ CMakeFiles/robot_controller.dir/src/robot_controller.cpp.o: /home/matheus/repos/
 
 /usr/include/c++/11/bits/predefined_ops.h:
 
+/usr/include/opencv4/opencv2/core/saturate.hpp:
+
 /opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:
 
 /usr/include/c++/11/bits/stl_function.h:
 
 /usr/include/c++/11/bits/memoryfwd.h:
+
+/usr/include/opencv4/opencv2/core/operations.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/endianness.h:
 
@@ -1299,9 +1484,13 @@ CMakeFiles/robot_controller.dir/src/robot_controller.cpp.o: /home/matheus/repos/
 
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
 
+/usr/include/opencv4/opencv2/core/hal/interface.h:
+
 /usr/include/x86_64-linux-gnu/bits/time.h:
 
 /usr/include/x86_64-linux-gnu/bits/select.h:
+
+/usr/include/curses.h:
 
 /opt/ros/humble/include/rcl/rcl/types.h:
 
@@ -1354,6 +1543,8 @@ CMakeFiles/robot_controller.dir/src/robot_controller.cpp.o: /home/matheus/repos/
 /usr/include/x86_64-linux-gnu/bits/sigevent-consts.h:
 
 /usr/include/c++/11/new:
+
+/usr/include/opencv4/opencv2/core/cvdef.h:
 
 /usr/include/c++/11/bits/sstream.tcc:
 
@@ -1535,6 +1726,10 @@ CMakeFiles/robot_controller.dir/src/robot_controller.cpp.o: /home/matheus/repos/
 
 /usr/include/c++/11/bits/istream.tcc:
 
+/usr/include/ncurses_dll.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/mmintrin.h:
+
 /usr/include/c++/11/list:
 
 /usr/include/c++/11/bits/stl_list.h:
@@ -1622,6 +1817,8 @@ CMakeFiles/robot_controller.dir/src/robot_controller.cpp.o: /home/matheus/repos/
 /usr/include/c++/11/variant:
 
 /opt/ros/humble/include/rcutils/rcutils/types/hash_map.h:
+
+/usr/include/opencv4/opencv2/core/types_c.h:
 
 /opt/ros/humble/include/rcutils/rcutils/types/string_array.h:
 
@@ -1711,6 +1908,8 @@ CMakeFiles/robot_controller.dir/src/robot_controller.cpp.o: /home/matheus/repos/
 
 /opt/ros/humble/include/rcl/rcl/subscription.h:
 
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/image.hpp:
+
 /opt/ros/humble/include/rcl/rcl/timer.h:
 
 /usr/include/c++/11/bits/locale_facets_nonio.h:
@@ -1793,6 +1992,8 @@ CMakeFiles/robot_controller.dir/src/robot_controller.cpp.o: /home/matheus/repos/
 
 /opt/ros/humble/include/rclcpp/rclcpp/function_traits.hpp:
 
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__traits.hpp:
+
 /opt/ros/humble/include/rclcpp/rclcpp/type_support_decl.hpp:
 
 /opt/ros/humble/include/rcl/rcl/arguments.h:
@@ -1809,7 +2010,13 @@ CMakeFiles/robot_controller.dir/src/robot_controller.cpp.o: /home/matheus/repos/
 
 /opt/ros/humble/include/rclcpp/rclcpp/utilities.hpp:
 
+/usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
+
 /opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_graph_interface.hpp:
+
+/usr/include/unctrl.h:
+
+/usr/include/opencv4/opencv2/core/core_c.h:
 
 /opt/ros/humble/include/rmw/rmw/names_and_types.h:
 
@@ -1891,6 +2098,8 @@ CMakeFiles/robot_controller.dir/src/robot_controller.cpp.o: /home/matheus/repos/
 
 /opt/ros/humble/include/rclcpp/rclcpp/any_service_callback.hpp:
 
+/usr/include/c++/11/complex:
+
 /usr/include/x86_64-linux-gnu/bits/math-vector.h:
 
 /opt/ros/humble/include/tracetools/tracetools/utils.hpp:
@@ -1947,6 +2156,8 @@ CMakeFiles/robot_controller.dir/src/robot_controller.cpp.o: /home/matheus/repos/
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/set_parameters_result__builder.hpp:
 
+/usr/include/opencv4/opencv2/core/bufferpool.hpp:
+
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_value__struct.hpp:
 
 /opt/ros/humble/include/rmw/rmw/qos_profiles.h:
@@ -1966,6 +2177,8 @@ CMakeFiles/robot_controller.dir/src/robot_controller.cpp.o: /home/matheus/repos/
 /usr/include/x86_64-linux-gnu/bits/fp-logb.h:
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
+
+/usr/include/opencv4/opencv2/core/ovx.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/endian.h:
 
@@ -2000,6 +2213,8 @@ CMakeFiles/robot_controller.dir/src/robot_controller.cpp.o: /home/matheus/repos/
 /opt/ros/humble/include/rmw/rmw/ret_types.h:
 
 /opt/ros/humble/include/libstatistics_collector/libstatistics_collector/moving_average_statistics/moving_average.hpp:
+
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/compressed_image__traits.hpp:
 
 /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__traits.hpp:
 

@@ -6,10 +6,14 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
 endif()
 
 # find dependencies
+
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(gazebo_ros REQUIRED)
 find_package(geometry_msgs REQUIRED)
+find_package(sensor_msgs REQUIRED)
+find_package(cv_bridge REQUIRED)
+find_package(OpenCV REQUIRED)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -26,7 +30,14 @@ endif()
 ament_package()
 
 add_executable(robot_controller src/robot_controller.cpp)
-ament_target_dependencies(robot_controller rclcpp geometry_msgs)
+ament_target_dependencies(
+  robot_controller 
+  rclcpp 
+  geometry_msgs 
+  sensor_msgs 
+  cv_bridge 
+  OpenCV
+)
 target_link_libraries(robot_controller ncurses)
 install(TARGETS
   robot_controller

@@ -1,6 +1,10 @@
 #include "rclcpp/rclcpp.hpp"
 #include "geometry_msgs/msg/twist.hpp"
+#include "sensor_msgs/msg/image.hpp"
+#include <cv_bridge/cv_bridge.h>
+#include <opencv2/highgui/highgui.hpp>
 #include <ncurses.h>
+
 
 class RobotController : public rclcpp::Node
 {
@@ -8,12 +12,15 @@ public:
     RobotController() : Node("robot_controller")
     {
         publisher_ = this->create_publisher<geometry_msgs::msg::Twist>("cmd_vel", 10);
+        subscriber_ = this->create_subscription<sensor_msgs::msg::Image>(
+            "/camera/image_raw", 10,
+            std::bind(&RobotController::imageCallback, this, std::placeholders::_1));
         initKeyboard();
     }
 
     ~RobotController()
     {
-        endwin(); // Finaliza o modo ncurses
+        endwin();
     }
 
     void controlLoop()
@@ -24,16 +31,16 @@ public:
             if ((ch = getch()) != ERR) {
                 geometry_msgs::msg::Twist msg;
                 switch (ch) {
-                    case 'w': // frente
+                    case 'w': 
                         msg.linear.x = 0.5;
                         break;
-                    case 's': // trás
+                    case 's': 
                         msg.linear.x = -0.5;
                         break;
-                    case 'a': // esquerda
+                    case 'a':
                         msg.angular.z = 1.0;
                         break;
-                    case 'd': // direita
+                    case 'd':
                         msg.angular.z = -1.0;
                         break;
                     default:
@@ -48,6 +55,17 @@ public:
         }
     }
 
+    void imageCallback(const sensor_msgs::msg::Image::SharedPtr msg)
+    {
+        try {
+            cv::Mat frame = cv_bridge::toCvCopy(msg, "bgr8")->image;
+            cv::imshow("Camera Image", frame);
+            cv::waitKey(1); // Espere 1 ms para que a janela possa processar eventos
+        } catch (cv_bridge::Exception& e) {
+            RCLCPP_ERROR(this->get_logger(), "Não foi possível converter a mensagem ROS para OpenCV: %s", e.what());
+        }
+    }
+
 private:
     void initKeyboard()
     {
@@ -57,6 +75,7 @@ private:
     }
 
     rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr publisher_;
+    rclcpp::Subscription<sensor_msgs::msg::Image>::SharedPtr subscriber_;
 };
 
 int main(int argc, char* argv[])
