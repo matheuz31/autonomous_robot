@@ -59,8 +59,25 @@ public:
     {
         try {
             cv::Mat frame = cv_bridge::toCvCopy(msg, "bgr8")->image;
+
+            cv::Mat edges;
+            cv::cvtColor(frame, edges, cv::COLOR_BGR2GRAY);
+            cv::GaussianBlur(edges, edges, cv::Size(3,3), 1.5, 1.5);
+            cv::Canny(edges, edges, 0, 30, 3);
+
+            bool obstacle = cv::countNonZero(edges) > 1000; 
+            
+            std::cout << "Counts: " << cv::countNonZero(edges) << std::endl;
+
+            geometry_msgs::msg::Twist move_msg;
+            if(obstacle){
+                move_msg.angular.z=1.0;
+                publisher_->publish(move_msg);
+            }
+
             cv::imshow("Camera Image", frame);
-            cv::waitKey(1); // Espere 1 ms para que a janela possa processar eventos
+            cv::imshow("Camera edges", edges);
+            cv::waitKey(1); 
         } catch (cv_bridge::Exception& e) {
             RCLCPP_ERROR(this->get_logger(), "Não foi possível converter a mensagem ROS para OpenCV: %s", e.what());
         }
