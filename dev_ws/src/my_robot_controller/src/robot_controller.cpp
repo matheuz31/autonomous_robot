@@ -56,32 +56,52 @@ public:
     }
 
     void imageCallback(const sensor_msgs::msg::Image::SharedPtr msg)
-    {
-        try {
-            cv::Mat frame = cv_bridge::toCvCopy(msg, "bgr8")->image;
+        {
+            try {
+                cv::Mat frame = cv_bridge::toCvCopy(msg, "bgr8")->image;
 
-            cv::Mat edges;
-            cv::cvtColor(frame, edges, cv::COLOR_BGR2GRAY);
-            cv::GaussianBlur(edges, edges, cv::Size(3,3), 1.5, 1.5);
-            cv::Canny(edges, edges, 0, 30, 3);
+                // Focando na parte inferior da imagem
+                int focusHeight = frame.rows * 0.75; // Ajuste conforme necessário
+                cv::Mat focusedFrame = frame(cv::Rect(0, focusHeight, frame.cols, frame.rows - focusHeight));
 
-            bool obstacle = cv::countNonZero(edges) > 1000; 
-            
-            std::cout << "Counts: " << cv::countNonZero(edges) << std::endl;
+                cv::Mat edges;
+                cv::cvtColor(focusedFrame, edges, cv::COLOR_BGR2GRAY);
+                cv::GaussianBlur(edges, edges, cv::Size(3,3), 1.5, 1.5);
+                cv::Canny(edges, edges, 0, 30, 3);
 
-            geometry_msgs::msg::Twist move_msg;
-            if(obstacle){
-                move_msg.angular.z=1.0;
+                // Procedimento padrão de divisão e contagem
+                int width = edges.cols;
+                int height = edges.rows;
+                int segmentWidth = width / 3;
+                cv::Rect leftRegion(0, 0, segmentWidth, height);
+                cv::Rect centerRegion(segmentWidth, 0, segmentWidth, height);
+                cv::Rect rightRegion(2 * segmentWidth, 0, segmentWidth, height);
+
+                int leftCount = cv::countNonZero(edges(leftRegion));
+                int centerCount = cv::countNonZero(edges(centerRegion));
+                int rightCount = cv::countNonZero(edges(rightRegion));
+
+                geometry_msgs::msg::Twist move_msg;
+                if(centerCount > 10) { 
+                    if(leftCount < rightCount) {
+                        move_msg.angular.z = 1.0;
+                    } else {
+                        move_msg.angular.z = -1.0;
+                    }
+                } else {
+                    move_msg.linear.x = 0.5;
+                    move_msg.angular.z = 0.0; 
+                }
+
                 publisher_->publish(move_msg);
-            }
 
-            cv::imshow("Camera Image", frame);
-            cv::imshow("Camera edges", edges);
-            cv::waitKey(1); 
-        } catch (cv_bridge::Exception& e) {
-            RCLCPP_ERROR(this->get_logger(), "Não foi possível converter a mensagem ROS para OpenCV: %s", e.what());
+                cv::imshow("Camera Image", frame);
+                cv::imshow("Focused Edges", edges);
+                cv::waitKey(1);
+            } catch (cv_bridge::Exception& e) {
+                RCLCPP_ERROR(this->get_logger(), "Não foi possível converter a mensagem ROS para OpenCV: %s", e.what());
+            }
         }
-    }
 
 private:
     void initKeyboard()
